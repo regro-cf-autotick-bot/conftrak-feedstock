@@ -1,5 +1,5 @@
 {% set name = "conftrak" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 
 package:
@@ -7,8 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conftrak-{{ version }}.tar.gz
-  sha256: 29bd0d698ed7f749dcccfd2773a4dce7bf7551dd0490a9020342fd24184868a4
+  # TODO: update the MANIFEST.in file to include the missing files in the sdist
+  # distribution, e.g.  `requirements.txt` and `LICENSE` and then the PyPI
+  # sources can be used.
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conftrak-{{ version }}.tar.gz
+  url: https://github.com/NSLS-II/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: af9f63e04e0fa6a47cd565238d3a0e993bd68d43595bc8e6e0682f9dc0e9a666
 
 build:
   number: 0
