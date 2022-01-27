@@ -12,7 +12,7 @@ source:
   # sources can be used.
   # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conftrak-{{ version }}.tar.gz
   url: https://github.com/NSLS-II/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5cb7e48d3ce42048a04dde4dad22309c04510145f4e7e8056ad3b8cc8443179e
+  sha256: af9f63e04e0fa6a47cd565238d3a0e993bd68d43595bc8e6e0682f9dc0e9a666
 
 build:
   number: 0
