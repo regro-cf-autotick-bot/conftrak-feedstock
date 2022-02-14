@@ -30,7 +30,7 @@ requirements:
     - pymongo
     - pyyaml
     - requests
-    - tornado <5
+    - tornado >=5
     - ujson
 
 test:
