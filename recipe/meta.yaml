@@ -1,5 +1,5 @@
 {% set name = "conftrak" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.8" %}
 
 
 package:
@@ -12,10 +12,10 @@ source:
   # sources can be used.
   # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conftrak-{{ version }}.tar.gz
   url: https://github.com/NSLS-II/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d2eca29cdb138320991a6cd131066bb0a22ce982337e841774ceff53d51991e7
+  sha256: 3bdbeb07ae66b62eda1fa90fd3e8e22d7872f19e7e1ceed591adfba8e70e8701
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
