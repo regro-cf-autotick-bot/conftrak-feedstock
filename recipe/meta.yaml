@@ -15,16 +15,16 @@ source:
   sha256: 66e890c68c98fb6beff62790156f31ed2f9e35d1ac2fc5e77656bd7c4e29980a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - doct
     - jsonschema
     - pymongo
@@ -41,6 +41,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/hhslepicka/conftrak.git
